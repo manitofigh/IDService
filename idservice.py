@@ -3,6 +3,17 @@ def IdDetect():
  sum = 0
  codeid = input("Please enter your ID code: ")
 
+# codeid = str(codeid)
+# if len(codeid) == 10:
+#     weighted_sum = sum(int(digit) * (10 - i) for i, digit in enumerate(codeid[:-1]))
+#     remainder = weighted_sum % 11
+#     if (remainder < 2 and remainder == int(codeid[-1])) or (remainder >= 2 and 11 - remainder == int(codeid[-1])):
+#         print("Valid ID\n\n")
+#     else:
+#         print("Invalid ID\n\n")
+# else:
+#     print("Invalid ID\n\n")
+# more efficient
  if len(str(codeid)) == 10:
      sum = sum + int(str(codeid) [0]) * 10
      sum = sum + int(str(codeid) [1]) * 9
